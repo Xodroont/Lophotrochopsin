@@ -1,0 +1,58 @@
+## Get quantiles
+
+df <- read.delim('TBE_Output.tbe.STAT',sep="\t")
+
+head(df)
+
+df2 <- df[602:1204,]
+head(df2)
+
+names(df2) <- df[601,]
+head(df2)
+
+df2$tIndex <- as.numeric(df2$tIndex)
+quantile(df2$tIndex)
+
+hist(df2$tIndex)
+plot(density(df2$tIndex))
+
+quantile(df2$tIndex,probs=c(.9,.95,.99))
+
+cutoff <- quantile(df2$tIndex,probs=c(.95))
+
+df2$Taxon[df2$tIndex > cutoff]
+
+
+#RESULTS
+
+165BrakuM1_53248
+PlaPlatyhelminthesProtopolystomaxenopodis_3153
+AneSpionidaStreblospiobenedicti_862696
+AneSpionidaStreblospiobenedicti_886623
+AneSabellidaOweniafusiformis_2664
+AneSabellidaOweniafusiformis_2699
+NemNemerteaLineuslongissimus_629467
+PhoPhoridaPhoronisaustralis_819365
+MolBivalviaMercenariamercenaria_1930
+PhoPhoridaPhoronisaustralis_796459
+NV_CN144Suga08
+NV_CN145Suga08
+NV_CN143Suga08
+NV_CN135
+NV_CN137Suga08
+NV_CN152Suga08
+HM_CN170
+ClR_CN101Suga08
+MolBivalviaMercenariamercenaria_1934
+MolGastropodaCandidulaunifasciata_247
+MolBivalviaMercenariamercenaria_1891
+BraBrachiopodaLingulaanatina_1591
+BraBrachiopodaLingulaanatina_1649
+Mnemiopsis_opsin3
+MolGastropodaGigantopeltaaegis_1339
+Tra_430364jgi
+Tra_429092jgi
+MolBivalviaMytilusgalloprovincialis_2322
+NemNemerteaLineuslongissimus_618617
+BryAneClitellataMetaphirevulgaris_698485
+AneSabellidaHydroideselegans_510884
