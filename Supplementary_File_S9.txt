@@ -84,8 +84,8 @@ Bayesian information criterion (BIC) score: 743801.8319
 
 #### according to BIC GTR+G4 is the best fit
 
-           -LnL        df   AIC          AICc         BIC
+            -LnL        df   AIC          AICc         BIC
 
-VT+R10     366915.478  1221 736272.956   737533.143   743825.94
+VT+R10      366915.478  1221 736272.956   737533.143   743825.94
 
-GTR20+G4			366121.6652 1412 735067.3305  736900.2712  743801.8319
+GTR20+G4    366121.6652 1412 735067.3305  736900.2712  743801.8319
